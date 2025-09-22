@@ -4,112 +4,112 @@ import { Link } from 'react-router-dom';
 import LocationCard from './LocationCard';
 import SearchSuggestions from './SearchSuggestions';
 
-// 100+ Famous locations in Uttar Pradesh - moved outside component to prevent recreating on every render
+// 100+ Famous locations in Sikkim - moved outside component to prevent recreating on every render
 const locations = [
   // Historical & Heritage
-  { name: 'Taj Mahal, Agra', category: 'historical', description: 'UNESCO World Heritage Site, Symbol of Love', rating: 4.9, visitors: '6M+' },
-    { name: 'Agra Fort', category: 'historical', description: 'Mughal Architecture Masterpiece', rating: 4.7, visitors: '2M+' },
-    { name: 'Fatehpur Sikri', category: 'historical', description: 'Ghost City of Akbar', rating: 4.6, visitors: '1M+' },
-    { name: 'Red Fort, Delhi Border', category: 'historical', description: 'Mughal Dynasty Fortress', rating: 4.5, visitors: '800K+' },
-    { name: 'Buland Darwaza', category: 'historical', description: 'Gate of Magnificence', rating: 4.4, visitors: '500K+' },
-    { name: 'Tomb of Itimad-ud-Daulah', category: 'historical', description: 'Baby Taj Mahal', rating: 4.3, visitors: '300K+' },
-    { name: 'Jhansi Fort', category: 'historical', description: 'Rani Lakshmibai\'s Stronghold', rating: 4.5, visitors: '400K+' },
-    { name: 'Chunar Fort', category: 'historical', description: 'Ancient Hilltop Fortress', rating: 4.2, visitors: '150K+' },
-    { name: 'Kalinjar Fort', category: 'historical', description: 'Strategic Hill Fort', rating: 4.3, visitors: '200K+' },
-    { name: 'Allahabad Fort', category: 'historical', description: 'Akbar\'s Architectural Marvel', rating: 4.4, visitors: '350K+' },
+  { name: 'Rumtek Monastery', category: 'historical', description: 'Sacred Buddhist Monastery, Seat of Karma Kagyu Lineage', rating: 4.9, visitors: '200K+' },
+    { name: 'Enchey Monastery', category: 'historical', description: 'Sacred 200-year-old Monastery', rating: 4.7, visitors: '150K+' },
+    { name: 'Pemayangtse Monastery', category: 'historical', description: 'Ancient Nyingma Order Gompa', rating: 4.6, visitors: '100K+' },
+    { name: 'Tashiding Monastery', category: 'historical', description: 'Sacred Buddhist Pilgrimage Site', rating: 4.5, visitors: '80K+' },
+    { name: 'Dubdi Monastery', category: 'historical', description: 'Sikkim\'s Oldest Monastery', rating: 4.4, visitors: '50K+' },
+    { name: 'Namgyal Institute of Tibetology', category: 'historical', description: 'Tibetan Research Center', rating: 4.3, visitors: '45K+' },
+    { name: 'Rabdentse Ruins', category: 'historical', description: 'Ancient Capital Remains', rating: 4.5, visitors: '40K+' },
+    { name: 'Changu Fortress', category: 'historical', description: 'Ancient Border Stronghold', rating: 4.2, visitors: '35K+' },
+    { name: 'Dro-dul Chorten', category: 'historical', description: 'Sacred Buddhist Stupa', rating: 4.3, visitors: '60K+' },
+    { name: 'Sikkim Palace, Gangtok', category: 'historical', description: 'Royal Heritage Structure', rating: 4.4, visitors: '70K+' },
 
     // Religious Sites
-    { name: 'Varanasi Ghats', category: 'religious', description: 'Spiritual Capital of India', rating: 4.8, visitors: '3M+' },
-    { name: 'Kashi Vishwanath Temple', category: 'religious', description: 'Most Sacred Shiva Temple', rating: 4.9, visitors: '2.5M+' },
-    { name: 'Ayodhya Ram Janmabhoomi', category: 'religious', description: 'Birthplace of Lord Rama', rating: 4.8, visitors: '2M+' },
-    { name: 'Mathura Krishna Janmabhoomi', category: 'religious', description: 'Birthplace of Lord Krishna', rating: 4.7, visitors: '1.5M+' },
-    { name: 'Vrindavan', category: 'religious', description: 'Krishna\'s Playground', rating: 4.6, visitors: '1.2M+' },
-    { name: 'Sarnath', category: 'religious', description: 'Buddha\'s First Sermon', rating: 4.5, visitors: '800K+' },
-    { name: 'Triveni Sangam, Prayagraj', category: 'religious', description: 'Confluence of Three Rivers', rating: 4.7, visitors: '5M+' },
-    { name: 'Vindhyavasini Devi Temple', category: 'religious', description: 'Shakti Peetha Temple', rating: 4.4, visitors: '600K+' },
-    { name: 'Chitrakoot', category: 'religious', description: 'Rama\'s Exile Destination', rating: 4.5, visitors: '700K+' },
-    { name: 'Govardhan Hill', category: 'religious', description: 'Sacred Krishna Hill', rating: 4.3, visitors: '500K+' },
+    { name: 'Tsomgo Lake', category: 'religious', description: 'Sacred Alpine Glacial Lake', rating: 4.8, visitors: '300K+' },
+    { name: 'Gurudongmar Lake', category: 'religious', description: 'One of World\'s Highest Sacred Lakes', rating: 4.9, visitors: '50K+' },
+    { name: 'Khecheopalri Lake', category: 'religious', description: 'Wish-fulfilling Sacred Lake', rating: 4.8, visitors: '80K+' },
+    { name: 'Kirateshwar Mahadev Temple', category: 'religious', description: 'Ancient Shiva Temple', rating: 4.7, visitors: '65K+' },
+    { name: 'Samdruptse', category: 'religious', description: 'Giant Buddha Statue', rating: 4.6, visitors: '120K+' },
+    { name: 'Solophok Chardham', category: 'religious', description: 'Pilgrimage Complex', rating: 4.5, visitors: '100K+' },
+    { name: 'Phodong Monastery', category: 'religious', description: 'Karma Kagyu Buddhist Monastery', rating: 4.7, visitors: '75K+' },
+    { name: 'Phensang Monastery', category: 'religious', description: 'Nyingma Buddhist Monastery', rating: 4.4, visitors: '40K+' },
+    { name: 'Sangachoeling Monastery', category: 'religious', description: 'Second Oldest Monastery', rating: 4.5, visitors: '35K+' },
+    { name: 'Tholung Monastery', category: 'religious', description: 'Sacred Artifacts Repository', rating: 4.3, visitors: '20K+' },
 
     // Natural & Wildlife
-    { name: 'Dudhwa National Park', category: 'nature', description: 'Tiger Reserve & Wildlife Sanctuary', rating: 4.6, visitors: '100K+' },
-    { name: 'Pilibhit Tiger Reserve', category: 'nature', description: 'Dense Forest & Tigers', rating: 4.4, visitors: '80K+' },
-    { name: 'Chandra Prabha Wildlife Sanctuary', category: 'nature', description: 'Scenic Wildlife Haven', rating: 4.2, visitors: '50K+' },
-    { name: 'Hastinapur Wildlife Sanctuary', category: 'nature', description: 'Gangetic Plains Wildlife', rating: 4.1, visitors: '60K+' },
-    { name: 'Sur Sarovar Bird Sanctuary', category: 'nature', description: 'Keetham Lake Bird Paradise', rating: 4.3, visitors: '75K+' },
-    { name: 'Okhla Bird Sanctuary', category: 'nature', description: 'Migratory Birds Haven', rating: 4.0, visitors: '40K+' },
-    { name: 'Kishanpur Wildlife Sanctuary', category: 'nature', description: 'Tiger & Leopard Reserve', rating: 4.2, visitors: '45K+' },
-    { name: 'Katarniaghat Wildlife Sanctuary', category: 'nature', description: 'Gharial & Crocodile Sanctuary', rating: 4.1, visitors: '35K+' },
+    { name: 'Khangchendzonga National Park', category: 'nature', description: 'UNESCO World Heritage Site, Third Highest Peak', rating: 4.9, visitors: '50K+' },
+    { name: 'Yumthang Valley', category: 'nature', description: 'Valley of Flowers', rating: 4.8, visitors: '100K+' },
+    { name: 'Green Lake Trek', category: 'nature', description: 'High Altitude Alpine Lake', rating: 4.7, visitors: '15K+' },
+    { name: 'Singalila National Park', category: 'nature', description: 'Red Panda Reserve', rating: 4.6, visitors: '30K+' },
+    { name: 'Barsey Rhododendron Sanctuary', category: 'nature', description: 'Rhododendron Forest Paradise', rating: 4.5, visitors: '25K+' },
+    { name: 'Maenam Wildlife Sanctuary', category: 'nature', description: 'Himalayan Flora & Fauna', rating: 4.4, visitors: '20K+' },
+    { name: 'Shingba Rhododendron Sanctuary', category: 'nature', description: 'Rare Alpine Flowers', rating: 4.5, visitors: '18K+' },
+    { name: 'Pangolakha Wildlife Sanctuary', category: 'nature', description: 'Himalayan Black Bear Habitat', rating: 4.3, visitors: '15K+' },
 
     // Modern Cities & Culture
-    { name: 'Lucknow', category: 'cultural', description: 'City of Nawabs', rating: 4.5, visitors: '2M+' },
-    { name: 'Bara Imambara, Lucknow', category: 'cultural', description: 'Architectural Wonder', rating: 4.6, visitors: '800K+' },
-    { name: 'Chota Imambara, Lucknow', category: 'cultural', description: 'Palace of Lights', rating: 4.4, visitors: '600K+' },
-    { name: 'Rumi Darwaza, Lucknow', category: 'cultural', description: 'Turkish Gateway', rating: 4.3, visitors: '500K+' },
-    { name: 'British Residency, Lucknow', category: 'cultural', description: 'Colonial Era Ruins', rating: 4.2, visitors: '300K+' },
-    { name: 'Kanpur', category: 'cultural', description: 'Industrial Heritage City', rating: 4.1, visitors: '1M+' },
-    { name: 'Meerut', category: 'cultural', description: '1857 Revolt Birthplace', rating: 4.0, visitors: '800K+' },
-    { name: 'Aligarh', category: 'cultural', description: 'Educational Hub', rating: 4.1, visitors: '600K+' },
+    { name: 'Gangtok', category: 'cultural', description: 'Capital City', rating: 4.7, visitors: '500K+' },
+    { name: 'MG Marg, Gangtok', category: 'cultural', description: 'Pedestrian-friendly Shopping Street', rating: 4.6, visitors: '400K+' },
+    { name: 'Lal Bazaar, Gangtok', category: 'cultural', description: 'Traditional Market', rating: 4.4, visitors: '300K+' },
+    { name: 'Namchi', category: 'cultural', description: 'Religious Tourism Hub', rating: 4.5, visitors: '150K+' },
+    { name: 'Sikkim Handicraft Center', category: 'cultural', description: 'Traditional Arts & Crafts', rating: 4.3, visitors: '100K+' },
+    { name: 'Pelling', category: 'cultural', description: 'Scenic Mountain Town', rating: 4.6, visitors: '180K+' },
+    { name: 'Ravangla', category: 'cultural', description: 'Buddha Park Town', rating: 4.5, visitors: '120K+' },
+    { name: 'Lachung', category: 'cultural', description: 'Mountain Village', rating: 4.8, visitors: '90K+' },
 
     // Additional Historical Sites
-    { name: 'Mehtab Bagh, Agra', category: 'historical', description: 'Moonlight Garden', rating: 4.3, visitors: '400K+' },
-    { name: 'Akbar\'s Tomb, Sikandra', category: 'historical', description: 'Mughal Emperor\'s Mausoleum', rating: 4.2, visitors: '350K+' },
-    { name: 'Mariam\'s Tomb, Sikandra', category: 'historical', description: 'Akbar\'s Wife\'s Tomb', rating: 4.0, visitors: '200K+' },
-    { name: 'Ram Bagh, Agra', category: 'historical', description: 'First Mughal Garden', rating: 3.9, visitors: '150K+' },
-    { name: 'Guru ka Tal, Sikandra', category: 'historical', description: 'Historical Water Tank', rating: 3.8, visitors: '100K+' },
+    { name: 'Kabi Lungchok', category: 'historical', description: 'Blood Brotherhood Site', rating: 4.3, visitors: '30K+' },
+    { name: 'Coronation Throne of Norbugang', category: 'historical', description: 'First Chogyal Coronation Site', rating: 4.2, visitors: '25K+' },
+    { name: 'Old Ralang Monastery', category: 'historical', description: 'Ancient Kagyu Monastery', rating: 4.4, visitors: '35K+' },
+    { name: 'Sikkimese Stone Art', category: 'historical', description: 'Ancient Stone Carvings', rating: 4.1, visitors: '20K+' },
+    { name: 'Dubdi Monastery', category: 'historical', description: 'First Monastery of Sikkim', rating: 4.5, visitors: '40K+' },
     
     // More Religious Sites
-    { name: 'Banke Bihari Temple, Vrindavan', category: 'religious', description: 'Famous Krishna Temple', rating: 4.6, visitors: '900K+' },
-    { name: 'ISKCON Temple, Vrindavan', category: 'religious', description: 'International Krishna Temple', rating: 4.5, visitors: '700K+' },
-    { name: 'Prem Mandir, Vrindavan', category: 'religious', description: 'Temple of Love', rating: 4.7, visitors: '800K+' },
-    { name: 'Radha Raman Temple, Vrindavan', category: 'religious', description: 'Ancient Krishna Temple', rating: 4.4, visitors: '500K+' },
-    { name: 'Dwarkadheesh Temple, Mathura', category: 'religious', description: 'Krishna\'s Royal Temple', rating: 4.5, visitors: '600K+' },
-    { name: 'Gita Mandir, Mathura', category: 'religious', description: 'Bhagavad Gita Temple', rating: 4.3, visitors: '400K+' },
-    { name: 'Kusum Sarovar, Govardhan', category: 'religious', description: 'Sacred Water Body', rating: 4.2, visitors: '300K+' },
-    { name: 'Radha Kund', category: 'religious', description: 'Most Sacred Pond', rating: 4.4, visitors: '350K+' },
+    { name: 'Lingdum Monastery', category: 'religious', description: 'Zurmang Kagyud Monastery', rating: 4.6, visitors: '30K+' },
+    { name: 'Ranka Monastery', category: 'religious', description: 'Nyingma Buddhist Monastery', rating: 4.5, visitors: '40K+' },
+    { name: 'Chardham', category: 'religious', description: 'Replicas of Four Holy Dhams', rating: 4.7, visitors: '80K+' },
+    { name: 'Pang Lhabsol Ground', category: 'religious', description: 'Traditional Festival Site', rating: 4.4, visitors: '25K+' },
+    { name: 'Tendong Hill', category: 'religious', description: 'Sacred Lepcha Heritage', rating: 4.5, visitors: '20K+' },
+    { name: 'Banjhakri Falls', category: 'religious', description: 'Shamanic Energy Site', rating: 4.6, visitors: '45K+' },
+    { name: 'Chakung Monastery', category: 'religious', description: 'Ancient Nyingma Gompa', rating: 4.2, visitors: '15K+' },
+    { name: 'Tashiding Hot Springs', category: 'religious', description: 'Sacred Healing Waters', rating: 4.4, visitors: '30K+' },
     
     // Cultural & Educational
-    { name: 'Banaras Hindu University', category: 'cultural', description: 'Ancient Seat of Learning', rating: 4.4, visitors: '500K+' },
-    { name: 'Aligarh Muslim University', category: 'cultural', description: 'Historic University', rating: 4.3, visitors: '400K+' },
-    { name: 'Jamia Millia Islamia', category: 'cultural', description: 'National University', rating: 4.2, visitors: '300K+' },
-    { name: 'Allahabad University', category: 'cultural', description: 'Premier Educational Institute', rating: 4.1, visitors: '250K+' },
+    { name: 'Sikkim University', category: 'cultural', description: 'Central University', rating: 4.4, visitors: '40K+' },
+    { name: 'Sikkim Manipal University', category: 'cultural', description: 'Technical Education Hub', rating: 4.3, visitors: '50K+' },
+    { name: 'Namgyal Research Institute', category: 'cultural', description: 'Tibetan Studies Center', rating: 4.5, visitors: '25K+' },
+    { name: 'Directorate of Handicrafts & Handloom', category: 'cultural', description: 'Traditional Crafts Institute', rating: 4.2, visitors: '20K+' },
     
     // Hill Stations & Scenic Places
-    { name: 'Nainital', category: 'nature', description: 'Lake City in Himalayas', rating: 4.6, visitors: '1.2M+' },
-    { name: 'Mussoorie', category: 'nature', description: 'Queen of Hill Stations', rating: 4.5, visitors: '1M+' },
-    { name: 'Rishikesh', category: 'nature', description: 'Yoga Capital of World', rating: 4.7, visitors: '800K+' },
-    { name: 'Haridwar', category: 'religious', description: 'Gateway to Gods', rating: 4.6, visitors: '1.5M+' },
+    { name: 'Zuluk', category: 'nature', description: 'Ancient Silk Route Hamlet', rating: 4.7, visitors: '30K+' },
+    { name: 'Nathang Valley', category: 'nature', description: 'High Altitude Valley', rating: 4.8, visitors: '25K+' },
+    { name: 'Lachen', category: 'nature', description: 'Gateway to North Sikkim', rating: 4.7, visitors: '40K+' },
+    { name: 'Dzongri', category: 'nature', description: 'High Altitude Trekking Base', rating: 4.6, visitors: '15K+' },
     
     // Archaeological Sites
-    { name: 'Kaushambi', category: 'historical', description: 'Ancient Buddhist Site', rating: 4.0, visitors: '50K+' },
-    { name: 'Shravasti', category: 'historical', description: 'Buddha\'s Monsoon Retreat', rating: 4.2, visitors: '80K+' },
-    { name: 'Kapilavastu', category: 'historical', description: 'Buddha\'s Birthplace Region', rating: 4.1, visitors: '60K+' },
-    { name: 'Sankassa', category: 'historical', description: 'Buddha\'s Descent Site', rating: 3.9, visitors: '40K+' },
+    { name: 'Yuksom', category: 'historical', description: 'First Capital of Sikkim', rating: 4.5, visitors: '35K+' },
+    { name: 'Tinkitam Rock Garden', category: 'historical', description: 'Ancient Stone Formations', rating: 4.2, visitors: '20K+' },
+    { name: 'Tashiding Stone Carvings', category: 'historical', description: 'Ancient Buddhist Inscriptions', rating: 4.3, visitors: '15K+' },
+    { name: 'Barapathing Ruins', category: 'historical', description: 'Pre-Buddhist Settlement', rating: 4.1, visitors: '10K+' },
     
     // More Cities & Towns
-    { name: 'Gorakhpur', category: 'cultural', description: 'Cultural Heritage City', rating: 4.1, visitors: '600K+' },
-    { name: 'Bareilly', category: 'cultural', description: 'Historical Trading Center', rating: 4.0, visitors: '400K+' },
-    { name: 'Moradabad', category: 'cultural', description: 'Brass City of India', rating: 4.0, visitors: '300K+' },
-    { name: 'Saharanpur', category: 'cultural', description: 'Wood Carving Capital', rating: 3.9, visitors: '250K+' },
-    { name: 'Firozabad', category: 'cultural', description: 'Glass City of India', rating: 3.8, visitors: '200K+' },
-    { name: 'Mirzapur', category: 'cultural', description: 'Carpet Weaving Center', rating: 3.9, visitors: '180K+' },
-    { name: 'Jaunpur', category: 'historical', description: 'City of Ancient Learning', rating: 4.1, visitors: '220K+' },
-    { name: 'Sultanpur', category: 'cultural', description: 'Historical Trading Hub', rating: 3.8, visitors: '150K+' },
+    { name: 'Mangan', category: 'cultural', description: 'North District Capital', rating: 4.2, visitors: '25K+' },
+    { name: 'Jorethang', category: 'cultural', description: 'Commercial Township', rating: 4.0, visitors: '30K+' },
+    { name: 'Singtam', category: 'cultural', description: 'Industrial Town', rating: 4.1, visitors: '28K+' },
+    { name: 'Rangpo', category: 'cultural', description: 'Border Gateway Town', rating: 4.0, visitors: '35K+' },
+    { name: 'Soreng', category: 'cultural', description: 'Western Sikkim Hub', rating: 4.2, visitors: '20K+' },
+    { name: 'Gyalshing', category: 'cultural', description: 'West District Capital', rating: 4.1, visitors: '22K+' },
+    { name: 'Pakyong', category: 'modern', description: 'Home to Sikkim Airport', rating: 4.3, visitors: '40K+' },
+    { name: 'Dikchu', category: 'cultural', description: 'River Valley Settlement', rating: 4.0, visitors: '15K+' },
     
     // Unique Attractions
-    { name: 'Bateshwar', category: 'religious', description: 'Ancient Temple Complex', rating: 4.2, visitors: '100K+' },
-    { name: 'Devgarh', category: 'historical', description: 'Ruined Fort City', rating: 4.0, visitors: '80K+' },
-    { name: 'Mahoba', category: 'historical', description: 'Chandela Dynasty Capital', rating: 4.1, visitors: '120K+' },
-    { name: 'Lalitpur', category: 'cultural', description: 'Town of Palaces', rating: 3.9, visitors: '90K+' },
-    { name: 'Banda', category: 'historical', description: 'Bundela Heritage Town', rating: 3.8, visitors: '70K+' },
-    { name: 'Hamirpur', category: 'cultural', description: 'Educational Hub', rating: 3.7, visitors: '60K+' },
-    { name: 'Chitrakoot Dham', category: 'religious', description: 'Holy Pilgrimage Site', rating: 4.3, visitors: '400K+' },
-    { name: 'Vindhyachal', category: 'religious', description: 'Goddess Durga Temple', rating: 4.4, visitors: '500K+' },
+    { name: 'Zero Point, Yumthang', category: 'nature', description: 'Snow Desert Landscape', rating: 4.8, visitors: '45K+' },
+    { name: 'Nathu La Pass', category: 'modern', description: 'Indo-China Border Pass', rating: 4.5, visitors: '60K+' },
+    { name: 'Chungthang', category: 'nature', description: 'River Confluence Town', rating: 4.3, visitors: '15K+' },
+    { name: 'Zemu Glacier', category: 'nature', description: 'Largest Glacier in Eastern Himalayas', rating: 4.7, visitors: '5K+' },
+    { name: 'Temi Tea Garden', category: 'cultural', description: 'Organic Tea Estate', rating: 4.5, visitors: '35K+' },
+    { name: 'Gnathang Valley', category: 'nature', description: 'High Altitude Valley', rating: 4.6, visitors: '20K+' },
+    { name: 'Aritar', category: 'cultural', description: 'Cultural Heritage Village', rating: 4.4, visitors: '18K+' },
+    { name: 'Kanchenjunga Falls', category: 'nature', description: 'Multi-tiered Waterfall', rating: 4.6, visitors: '40K+' },
     
     // Modern Developments
-    { name: 'Noida', category: 'modern', description: 'Planned Industrial City', rating: 4.2, visitors: '800K+' },
-    { name: 'Greater Noida', category: 'modern', description: 'Modern Satellite City', rating: 4.1, visitors: '500K+' },
-    { name: 'Ghaziabad', category: 'modern', description: 'Gateway of UP', rating: 4.0, visitors: '600K+' },
-    { name: 'Faridabad', category: 'modern', description: 'Industrial Hub', rating: 3.9, visitors: '400K+' },
+    { name: 'Pakyong Airport', category: 'modern', description: 'Engineering Marvel Airport', rating: 4.5, visitors: '100K+' },
+    { name: 'Sikkim Flower Show Complex', category: 'modern', description: 'International Exhibition Center', rating: 4.3, visitors: '40K+' },
+    { name: 'Banjhakri Eco Park', category: 'modern', description: 'Energy Park & Gardens', rating: 4.4, visitors: '55K+' },
+    { name: 'Ropeway Gangtok', category: 'modern', description: 'Aerial Transit System', rating: 4.6, visitors: '90K+' },
     
     // Wildlife & Nature Additional
     { name: 'Turtle Sanctuary Sandi', category: 'nature', description: 'Turtle Conservation Center', rating: 4.0, visitors: '30K+' },
@@ -141,93 +141,93 @@ const locations = [
 
 // Nearby locations mapping - when user searches for a location, show nearby attractions
 const nearbyLocationsMap = {
-    'agra': [
-      { name: 'Taj Mahal, Agra', category: 'historical', description: 'UNESCO World Heritage Site, Symbol of Love', rating: 4.9, visitors: '6M+', distance: '0 km' },
-      { name: 'Agra Fort', category: 'historical', description: 'Mughal Architecture Masterpiece', rating: 4.7, visitors: '2M+', distance: '2.5 km' },
-      { name: 'Mehtab Bagh, Agra', category: 'historical', description: 'Moonlight Garden', rating: 4.3, visitors: '400K+', distance: '1.2 km' },
-      { name: 'Tomb of Itimad-ud-Daulah', category: 'historical', description: 'Baby Taj Mahal', rating: 4.3, visitors: '300K+', distance: '5 km' },
-      { name: 'Akbar\'s Tomb, Sikandra', category: 'historical', description: 'Mughal Emperor\'s Mausoleum', rating: 4.2, visitors: '350K+', distance: '10 km' },
-      { name: 'Fatehpur Sikri', category: 'historical', description: 'Ghost City of Akbar', rating: 4.6, visitors: '1M+', distance: '37 km' }
+    'gangtok': [
+      { name: 'Gangtok', category: 'cultural', description: 'Capital City', rating: 4.7, visitors: '500K+', distance: '0 km' },
+      { name: 'Rumtek Monastery', category: 'historical', description: 'Sacred Buddhist Monastery', rating: 4.9, visitors: '200K+', distance: '24 km' },
+      { name: 'MG Marg, Gangtok', category: 'cultural', description: 'Pedestrian-friendly Shopping Street', rating: 4.6, visitors: '400K+', distance: '1 km' },
+      { name: 'Enchey Monastery', category: 'historical', description: 'Sacred 200-year-old Monastery', rating: 4.7, visitors: '150K+', distance: '3 km' },
+      { name: 'Namgyal Institute of Tibetology', category: 'historical', description: 'Tibetan Research Center', rating: 4.3, visitors: '45K+', distance: '2 km' },
+      { name: 'Tsomgo Lake', category: 'religious', description: 'Sacred Alpine Glacial Lake', rating: 4.8, visitors: '300K+', distance: '38 km' }
     ],
-    'mathura': [
-      { name: 'Mathura Krishna Janmabhoomi', category: 'religious', description: 'Birthplace of Lord Krishna', rating: 4.7, visitors: '1.5M+', distance: '0 km' },
-      { name: 'Dwarkadheesh Temple, Mathura', category: 'religious', description: 'Krishna\'s Royal Temple', rating: 4.5, visitors: '600K+', distance: '1 km' },
-      { name: 'Gita Mandir, Mathura', category: 'religious', description: 'Bhagavad Gita Temple', rating: 4.3, visitors: '400K+', distance: '2 km' },
-      { name: 'Vrindavan', category: 'religious', description: 'Krishna\'s Playground', rating: 4.6, visitors: '1.2M+', distance: '11 km' },
-      { name: 'Govardhan Hill', category: 'religious', description: 'Sacred Krishna Hill', rating: 4.3, visitors: '500K+', distance: '22 km' },
-      { name: 'Barsana', category: 'religious', description: 'Radha\'s Birthplace', rating: 4.4, visitors: '400K+', distance: '45 km' }
+    'pelling': [
+      { name: 'Pelling', category: 'cultural', description: 'Scenic Mountain Town', rating: 4.6, visitors: '180K+', distance: '0 km' },
+      { name: 'Pemayangtse Monastery', category: 'historical', description: 'Ancient Nyingma Order Gompa', rating: 4.6, visitors: '100K+', distance: '2.5 km' },
+      { name: 'Rabdentse Ruins', category: 'historical', description: 'Ancient Capital Remains', rating: 4.5, visitors: '40K+', distance: '3 km' },
+      { name: 'Khecheopalri Lake', category: 'religious', description: 'Wish-fulfilling Sacred Lake', rating: 4.8, visitors: '80K+', distance: '27 km' },
+      { name: 'Kanchenjunga Falls', category: 'nature', description: 'Multi-tiered Waterfall', rating: 4.6, visitors: '40K+', distance: '15 km' },
+      { name: 'Singshore Bridge', category: 'modern', description: 'Second Highest Gorge Bridge in Asia', rating: 4.4, visitors: '55K+', distance: '8 km' }
     ],
-    'vrindavan': [
-      { name: 'Vrindavan', category: 'religious', description: 'Krishna\'s Playground', rating: 4.6, visitors: '1.2M+', distance: '0 km' },
-      { name: 'Banke Bihari Temple, Vrindavan', category: 'religious', description: 'Famous Krishna Temple', rating: 4.6, visitors: '900K+', distance: '1 km' },
-      { name: 'ISKCON Temple, Vrindavan', category: 'religious', description: 'International Krishna Temple', rating: 4.5, visitors: '700K+', distance: '2 km' },
-      { name: 'Prem Mandir, Vrindavan', category: 'religious', description: 'Temple of Love', rating: 4.7, visitors: '800K+', distance: '3 km' },
-      { name: 'Radha Raman Temple, Vrindavan', category: 'religious', description: 'Ancient Krishna Temple', rating: 4.4, visitors: '500K+', distance: '1.5 km' },
-      { name: 'Mathura Krishna Janmabhoomi', category: 'religious', description: 'Birthplace of Lord Krishna', rating: 4.7, visitors: '1.5M+', distance: '11 km' }
+    'lachung': [
+      { name: 'Lachung', category: 'cultural', description: 'Mountain Village', rating: 4.8, visitors: '90K+', distance: '0 km' },
+      { name: 'Yumthang Valley', category: 'nature', description: 'Valley of Flowers', rating: 4.8, visitors: '100K+', distance: '25 km' },
+      { name: 'Zero Point', category: 'nature', description: 'Snow Desert Landscape', rating: 4.8, visitors: '45K+', distance: '45 km' },
+      { name: 'Bhim Nala Falls', category: 'nature', description: 'Pristine Waterfall', rating: 4.5, visitors: '30K+', distance: '10 km' },
+      { name: 'Lachung Monastery', category: 'religious', description: 'Ancient Buddhist Temple', rating: 4.6, visitors: '40K+', distance: '1.5 km' },
+      { name: 'Shingba Rhododendron Sanctuary', category: 'nature', description: 'Rare Alpine Flowers', rating: 4.5, visitors: '18K+', distance: '20 km' }
     ],
-    'varanasi': [
-      { name: 'Varanasi Ghats', category: 'religious', description: 'Spiritual Capital of India', rating: 4.8, visitors: '3M+', distance: '0 km' },
-      { name: 'Kashi Vishwanath Temple', category: 'religious', description: 'Most Sacred Shiva Temple', rating: 4.9, visitors: '2.5M+', distance: '1 km' },
-      { name: 'Sarnath', category: 'religious', description: 'Buddha\'s First Sermon', rating: 4.5, visitors: '800K+', distance: '13 km' },
-      { name: 'Banaras Hindu University', category: 'cultural', description: 'Ancient Seat of Learning', rating: 4.4, visitors: '500K+', distance: '8 km' },
-      { name: 'Ramnagar Fort', category: 'historical', description: 'Royal Palace Museum', rating: 4.2, visitors: '200K+', distance: '14 km' },
-      { name: 'Chunar Fort', category: 'historical', description: 'Ancient Hilltop Fortress', rating: 4.2, visitors: '150K+', distance: '40 km' }
+    'namchi': [
+      { name: 'Namchi', category: 'cultural', description: 'Religious Tourism Hub', rating: 4.5, visitors: '150K+', distance: '0 km' },
+      { name: 'Samdruptse', category: 'religious', description: 'Giant Buddha Statue', rating: 4.6, visitors: '120K+', distance: '6 km' },
+      { name: 'Solophok Chardham', category: 'religious', description: 'Pilgrimage Complex', rating: 4.5, visitors: '100K+', distance: '3 km' },
+      { name: 'Temi Tea Garden', category: 'cultural', description: 'Organic Tea Estate', rating: 4.5, visitors: '35K+', distance: '15 km' },
+      { name: 'Tendong Hill', category: 'religious', description: 'Sacred Lepcha Heritage', rating: 4.5, visitors: '20K+', distance: '18 km' },
+      { name: 'Ngadak Monastery', category: 'historical', description: 'Historic Buddhist Temple', rating: 4.3, visitors: '25K+', distance: '8 km' }
     ],
-    'lucknow': [
-      { name: 'Lucknow', category: 'cultural', description: 'City of Nawabs', rating: 4.5, visitors: '2M+', distance: '0 km' },
-      { name: 'Bara Imambara, Lucknow', category: 'cultural', description: 'Architectural Wonder', rating: 4.6, visitors: '800K+', distance: '3 km' },
-      { name: 'Chota Imambara, Lucknow', category: 'cultural', description: 'Palace of Lights', rating: 4.4, visitors: '600K+', distance: '4 km' },
-      { name: 'Rumi Darwaza, Lucknow', category: 'cultural', description: 'Turkish Gateway', rating: 4.3, visitors: '500K+', distance: '3.5 km' },
-      { name: 'British Residency, Lucknow', category: 'cultural', description: 'Colonial Era Ruins', rating: 4.2, visitors: '300K+', distance: '5 km' },
-      { name: 'La Martiniere College', category: 'cultural', description: 'Historic Educational Institution', rating: 4.1, visitors: '100K+', distance: '6 km' }
+    'ravangla': [
+      { name: 'Ravangla', category: 'cultural', description: 'Buddha Park Town', rating: 4.5, visitors: '120K+', distance: '0 km' },
+      { name: 'Buddha Park', category: 'religious', description: 'Giant Buddha Statue & Gardens', rating: 4.7, visitors: '100K+', distance: '2 km' },
+      { name: 'Ralong Monastery', category: 'religious', description: 'Kagyu School Monastery', rating: 4.5, visitors: '40K+', distance: '8 km' },
+      { name: 'Maenam Wildlife Sanctuary', category: 'nature', description: 'Himalayan Flora & Fauna', rating: 4.4, visitors: '20K+', distance: '12 km' },
+      { name: 'Bon Monastery', category: 'religious', description: 'Pre-Buddhist Tradition Temple', rating: 4.3, visitors: '15K+', distance: '10 km' },
+      { name: 'Ralang Hot Springs', category: 'nature', description: 'Therapeutic Sulfur Springs', rating: 4.2, visitors: '25K+', distance: '15 km' }
     ],
-    'ayodhya': [
-      { name: 'Ayodhya Ram Janmabhoomi', category: 'religious', description: 'Birthplace of Lord Rama', rating: 4.8, visitors: '2M+', distance: '0 km' },
-      { name: 'Hanuman Garhi, Ayodhya', category: 'religious', description: 'Sacred Hanuman Temple', rating: 4.6, visitors: '800K+', distance: '2 km' },
-      { name: 'Kanak Bhawan, Ayodhya', category: 'religious', description: 'Sita Ram Temple', rating: 4.5, visitors: '600K+', distance: '1.5 km' },
-      { name: 'Dashrath Mahal, Ayodhya', category: 'historical', description: 'King Dashrath\'s Palace', rating: 4.3, visitors: '400K+', distance: '3 km' },
-      { name: 'Faizabad', category: 'cultural', description: 'Historic Nawabi City', rating: 4.1, visitors: '300K+', distance: '7 km' },
-      { name: 'Guptar Ghat, Ayodhya', category: 'religious', description: 'Rama\'s Final Journey Site', rating: 4.4, visitors: '350K+', distance: '4 km' }
+    'yuksom': [
+      { name: 'Yuksom', category: 'historical', description: 'First Capital of Sikkim', rating: 4.5, visitors: '35K+', distance: '0 km' },
+      { name: 'Dubdi Monastery', category: 'historical', description: 'First Monastery of Sikkim', rating: 4.5, visitors: '40K+', distance: '3 km' },
+      { name: 'Coronation Throne', category: 'historical', description: 'First Chogyal Coronation Site', rating: 4.2, visitors: '25K+', distance: '1 km' },
+      { name: 'Kathok Wodsallin Monastery', category: 'religious', description: 'Ancient Buddhist Temple', rating: 4.3, visitors: '20K+', distance: '2 km' },
+      { name: 'Khecheopalri Lake', category: 'religious', description: 'Wish-fulfilling Sacred Lake', rating: 4.8, visitors: '80K+', distance: '24 km' },
+      { name: 'Dzongri Trek Base', category: 'adventure', description: 'Trekking Starting Point', rating: 4.6, visitors: '15K+', distance: '5 km' }
     ],
-    'prayagraj': [
-      { name: 'Triveni Sangam, Prayagraj', category: 'religious', description: 'Confluence of Three Rivers', rating: 4.7, visitors: '5M+', distance: '0 km' },
-      { name: 'Allahabad Fort', category: 'historical', description: 'Akbar\'s Architectural Marvel', rating: 4.4, visitors: '350K+', distance: '3 km' },
-      { name: 'Kumbh Mela Ground, Prayagraj', category: 'cultural', description: 'World\'s Largest Gathering', rating: 4.8, visitors: '100M+', distance: '5 km' },
-      { name: 'Allahabad University', category: 'cultural', description: 'Premier Educational Institute', rating: 4.1, visitors: '250K+', distance: '8 km' },
-      { name: 'Anand Bhavan', category: 'historical', description: 'Nehru Family Museum', rating: 4.3, visitors: '200K+', distance: '6 km' },
-      { name: 'Khusro Bagh', category: 'historical', description: 'Mughal Garden Tombs', rating: 4.2, visitors: '150K+', distance: '7 km' }
+    'tsomgo': [
+      { name: 'Tsomgo Lake', category: 'religious', description: 'Sacred Alpine Glacial Lake', rating: 4.8, visitors: '300K+', distance: '0 km' },
+      { name: 'Baba Mandir', category: 'religious', description: 'Holy Shrine', rating: 4.6, visitors: '200K+', distance: '5 km' },
+      { name: 'Nathu La Pass', category: 'modern', description: 'Indo-China Border Pass', rating: 4.5, visitors: '60K+', distance: '18 km' },
+      { name: 'Kyongnosla Alpine Sanctuary', category: 'nature', description: 'Alpine Vegetation Preserve', rating: 4.3, visitors: '25K+', distance: '10 km' },
+      { name: 'Hangu Lake', category: 'nature', description: 'Hidden Alpine Lake', rating: 4.4, visitors: '15K+', distance: '8 km' },
+      { name: 'Zuluk', category: 'nature', description: 'Ancient Silk Route Hamlet', rating: 4.7, visitors: '30K+', distance: '32 km' }
     ],
-    'chitrakoot': [
-      { name: 'Chitrakoot', category: 'religious', description: 'Rama\'s Exile Destination', rating: 4.5, visitors: '700K+', distance: '0 km' },
-      { name: 'Chitrakoot Dham', category: 'religious', description: 'Holy Pilgrimage Site', rating: 4.3, visitors: '400K+', distance: '2 km' },
-      { name: 'Ram Ghat, Chitrakoot', category: 'religious', description: 'Sacred Bathing Ghat', rating: 4.4, visitors: '500K+', distance: '1 km' },
-      { name: 'Kamadgiri Hill', category: 'religious', description: 'Sacred Parikrama Hill', rating: 4.3, visitors: '350K+', distance: '3 km' },
-      { name: 'Bharat Milap Temple', category: 'religious', description: 'Brothers\' Meeting Place', rating: 4.2, visitors: '300K+', distance: '2.5 km' },
-      { name: 'Sphatik Shila', category: 'religious', description: 'Crystal Rock Seat', rating: 4.1, visitors: '250K+', distance: '4 km' }
+    'lachen': [
+      { name: 'Lachen', category: 'nature', description: 'Gateway to North Sikkim', rating: 4.7, visitors: '40K+', distance: '0 km' },
+      { name: 'Gurudongmar Lake', category: 'religious', description: 'One of World\'s Highest Sacred Lakes', rating: 4.9, visitors: '50K+', distance: '55 km' },
+      { name: 'Green Lake Trek Base', category: 'nature', description: 'High Altitude Alpine Lake Trek Start', rating: 4.7, visitors: '15K+', distance: '10 km' },
+      { name: 'Chopta Valley', category: 'nature', description: 'Alpine Valley', rating: 4.6, visitors: '20K+', distance: '30 km' },
+      { name: 'Lachen Monastery', category: 'religious', description: 'Ancient Buddhist Temple', rating: 4.4, visitors: '25K+', distance: '1 km' },
+      { name: 'Thangu Valley', category: 'nature', description: 'High Altitude Valley', rating: 4.8, visitors: '18K+', distance: '30 km' }
     ],
-    'kanpur': [
-      { name: 'Kanpur', category: 'cultural', description: 'Industrial Heritage City', rating: 4.1, visitors: '1M+', distance: '0 km' },
-      { name: 'Kanpur Memorial Church', category: 'historical', description: '1857 Uprising Memorial', rating: 4.2, visitors: '150K+', distance: '5 km' },
-      { name: 'Allen Forest Zoo', category: 'nature', description: 'Urban Wildlife Park', rating: 4.0, visitors: '200K+', distance: '8 km' },
-      { name: 'Bithoor', category: 'historical', description: 'Ancient Pilgrimage Town', rating: 4.3, visitors: '300K+', distance: '25 km' },
-      { name: 'Jajmau', category: 'historical', description: 'Ancient Trading Center', rating: 3.9, visitors: '100K+', distance: '15 km' },
-      { name: 'Phool Bagh', category: 'cultural', description: 'Historic Garden Park', rating: 4.0, visitors: '180K+', distance: '6 km' }
+    'yumthang': [
+      { name: 'Yumthang Valley', category: 'nature', description: 'Valley of Flowers', rating: 4.8, visitors: '100K+', distance: '0 km' },
+      { name: 'Zero Point', category: 'nature', description: 'Snow Desert Landscape', rating: 4.8, visitors: '45K+', distance: '23 km' },
+      { name: 'Hot Springs', category: 'nature', description: 'Natural Thermal Springs', rating: 4.6, visitors: '60K+', distance: '1 km' },
+      { name: 'Shingba Rhododendron Sanctuary', category: 'nature', description: 'Rare Alpine Flowers', rating: 4.5, visitors: '18K+', distance: '5 km' },
+      { name: 'Lachung', category: 'cultural', description: 'Mountain Village', rating: 4.8, visitors: '90K+', distance: '25 km' },
+      { name: 'Yumthang Chu River', category: 'nature', description: 'Pristine Mountain River', rating: 4.7, visitors: '80K+', distance: '0.5 km' }
     ],
-    'jhansi': [
-      { name: 'Jhansi Fort', category: 'historical', description: 'Rani Lakshmibai\'s Stronghold', rating: 4.5, visitors: '400K+', distance: '0 km' },
-      { name: 'Rani Mahal, Jhansi', category: 'historical', description: 'Queen\'s Palace Museum', rating: 4.3, visitors: '200K+', distance: '2 km' },
-      { name: 'Government Museum, Jhansi', category: 'cultural', description: 'Archaeological Collection', rating: 4.1, visitors: '100K+', distance: '3 km' },
-      { name: 'Orchha', category: 'historical', description: 'Medieval Heritage Town', rating: 4.6, visitors: '500K+', distance: '16 km' },
-      { name: 'Khajuraho', category: 'historical', description: 'UNESCO Temple Complex', rating: 4.7, visitors: '800K+', distance: '175 km' },
-      { name: 'Shivpuri', category: 'nature', description: 'Wildlife National Park', rating: 4.2, visitors: '150K+', distance: '120 km' }
+    'zuluk': [
+      { name: 'Zuluk', category: 'nature', description: 'Ancient Silk Route Hamlet', rating: 4.7, visitors: '30K+', distance: '0 km' },
+      { name: 'Thambi View Point', category: 'nature', description: 'Sunrise View of Kanchenjunga', rating: 4.9, visitors: '25K+', distance: '5 km' },
+      { name: 'Lungthung', category: 'nature', description: 'Silk Route Settlement', rating: 4.6, visitors: '20K+', distance: '12 km' },
+      { name: 'Nathang Valley', category: 'nature', description: 'High Altitude Valley', rating: 4.8, visitors: '25K+', distance: '15 km' },
+      { name: 'Elephant Lake', category: 'nature', description: 'Alpine Water Body', rating: 4.4, visitors: '15K+', distance: '18 km' },
+      { name: 'Gnathang Valley', category: 'nature', description: 'High Altitude Valley', rating: 4.6, visitors: '20K+', distance: '22 km' }
     ],
-    'gorakhpur': [
-      { name: 'Gorakhpur', category: 'cultural', description: 'Cultural Heritage City', rating: 4.1, visitors: '600K+', distance: '0 km' },
-      { name: 'Gorakhnath Temple', category: 'religious', description: 'Ancient Nath Sect Temple', rating: 4.4, visitors: '800K+', distance: '4 km' },
-      { name: 'Kushmi Forest', category: 'nature', description: 'Dense Forest Reserve', rating: 4.0, visitors: '50K+', distance: '45 km' },
-      { name: 'Ramgarh Tal', category: 'nature', description: 'Natural Lake', rating: 3.9, visitors: '80K+', distance: '12 km' },
-      { name: 'Veer Bahadur Singh Planetarium', category: 'modern', description: 'Science & Astronomy Center', rating: 4.2, visitors: '120K+', distance: '6 km' },
-      { name: 'Chauri Chaura', category: 'historical', description: 'Freedom Struggle Site', rating: 4.0, visitors: '75K+', distance: '25 km' }
+    'nathula': [
+      { name: 'Nathu La Pass', category: 'modern', description: 'Indo-China Border Pass', rating: 4.5, visitors: '60K+', distance: '0 km' },
+      { name: 'Baba Mandir', category: 'religious', description: 'Holy Shrine', rating: 4.6, visitors: '200K+', distance: '13 km' },
+      { name: 'Tsomgo Lake', category: 'religious', description: 'Sacred Alpine Glacial Lake', rating: 4.8, visitors: '300K+', distance: '18 km' },
+      { name: 'Kupup Lake', category: 'nature', description: 'Elephant-shaped Lake', rating: 4.5, visitors: '30K+', distance: '5 km' },
+      { name: 'Memencho Lake', category: 'nature', description: 'High Altitude Lake', rating: 4.4, visitors: '20K+', distance: '20 km' },
+      { name: 'Zuluk', category: 'nature', description: 'Ancient Silk Route Hamlet', rating: 4.7, visitors: '30K+', distance: '32 km' }
     ]
 };
 
@@ -277,7 +277,7 @@ const UttarPradeshTravelPortal = () => {
   ];
 
   const handleLocationClick = (locationName) => {
-    const query = encodeURIComponent(locationName + ', Uttar Pradesh, India');
+    const query = encodeURIComponent(locationName + ', Sikkim, India');
     window.open(`https://www.google.com/maps/search/${query}`, '_blank');
   };
 
@@ -298,7 +298,7 @@ const UttarPradeshTravelPortal = () => {
                 <Compass className="w-6 h-6 text-white" />
               </div>
               <div>
-                <h1 className="text-xl font-bold text-gray-900">UP Explorer</h1>
+                <h1 className="text-xl font-bold text-gray-900">Sikkim Explorer</h1>
                 <p className="text-xs text-gray-500">Premium Travel Experience</p>
               </div>
             </div>
@@ -338,21 +338,21 @@ const UttarPradeshTravelPortal = () => {
             <div className="bg-white/10 backdrop-blur-md rounded-full px-6 py-3 border border-white/20">
               <span className="text-amber-300 font-medium flex items-center">
                 <Award className="w-5 h-5 mr-2" />
-                India's Cultural Capital
+                Himalayan Paradise
               </span>
             </div>
           </div>
           
           <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
             <span className="bg-gradient-to-r from-amber-300 via-orange-400 to-amber-500 bg-clip-text text-transparent">
-              Uttar Pradesh
+              Sikkim
             </span>
             <br />
             <span className="text-white/90">Unveiled</span>
           </h1>
           
           <p className="text-xl md:text-2xl mb-12 text-gray-300 leading-relaxed max-w-3xl mx-auto">
-            Embark on an extraordinary journey through India's most magnificent state, where ancient heritage meets timeless spirituality
+            Embark on an extraordinary journey through India's most breathtaking Himalayan state, where natural beauty meets vibrant culture
           </p>
 
           {/* Premium Search Container */}
@@ -363,7 +363,7 @@ const UttarPradeshTravelPortal = () => {
                   <Search className="w-6 h-6 text-gray-400 ml-4" />
                   <input
                     type="text"
-                    placeholder="Discover sacred temples, majestic forts, cultural treasures..."
+                    placeholder="Discover snow-capped mountains, Buddhist monasteries, alpine lakes..."
                     className="flex-1 px-4 py-4 bg-transparent text-gray-800 placeholder-gray-500 focus:outline-none text-lg"
                     value={searchQuery}
                     onChange={(e) => {
@@ -450,7 +450,7 @@ const UttarPradeshTravelPortal = () => {
               {selectedCategory === 'all' ? 'All Premium Destinations' : categories.find(c => c.id === selectedCategory)?.name}
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Discover {filteredLocations.length} extraordinary places that showcase the finest of Uttar Pradesh's cultural heritage and natural beauty
+              Discover {filteredLocations.length} extraordinary places that showcase the finest of Sikkim's mountain landscapes and cultural wonders
             </p>
           </div>
 
@@ -477,12 +477,12 @@ const UttarPradeshTravelPortal = () => {
                   <Compass className="w-7 h-7 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold">UP Explorer</h3>
+                  <h3 className="text-2xl font-bold">Sikkim Explorer</h3>
                   <p className="text-amber-400 text-sm">Premium Travel Experience</p>
                 </div>
               </div>
               <p className="text-gray-400 text-lg leading-relaxed mb-6">
-                Experience the extraordinary heritage and spiritual essence of Uttar Pradesh through our carefully curated destinations and premium travel experiences.
+                Experience the extraordinary natural beauty and cultural richness of Sikkim through our carefully curated destinations and premium travel experiences.
               </p>
               <div className="flex space-x-6">
                 <div className="text-center">
@@ -504,10 +504,10 @@ const UttarPradeshTravelPortal = () => {
             <div>
               <h4 className="text-lg font-semibold mb-4 text-amber-400">Experiences</h4>
               <ul className="space-y-2 text-gray-400">
-                <li className="hover:text-white cursor-pointer transition-colors">🕌 Historical Heritage</li>
-                <li className="hover:text-white cursor-pointer transition-colors">🙏 Sacred Pilgrimages</li>
-                <li className="hover:text-white cursor-pointer transition-colors">🌿 Natural Sanctuaries</li>
-                <li className="hover:text-white cursor-pointer transition-colors">� Cultural Immersions</li>
+                <li className="hover:text-white cursor-pointer transition-colors">🏔️ Himalayan Treks</li>
+                <li className="hover:text-white cursor-pointer transition-colors">🙏 Buddhist Monasteries</li>
+                <li className="hover:text-white cursor-pointer transition-colors">🌿 Alpine Meadows</li>
+                <li className="hover:text-white cursor-pointer transition-colors">🎭 Cultural Immersions</li>
               </ul>
             </div>
             
@@ -526,7 +526,7 @@ const UttarPradeshTravelPortal = () => {
           {/* Bottom Footer */}
           <div className="border-t border-gray-800 pt-8 text-center">
             <p className="text-gray-400">
-              © 2025 UP Explorer. Crafted with ❤️ for India's Cultural Heritage.
+              © 2025 Sikkim Explorer. Crafted with ❤️ for India's Cultural Heritage.
             </p>
           </div>
         </div>

@@ -280,7 +280,7 @@ const Experiences = () => {
                 <Compass className="w-6 h-6 text-white" />
               </div>
               <div>
-                <h1 className="text-xl font-bold text-gray-900">UP Explorer</h1>
+                <h1 className="text-xl font-bold text-gray-900">SIKKIM Explorer</h1>
                 <p className="text-xs text-gray-500">Premium Travel Experience</p>
               </div>
             </Link>
@@ -302,7 +302,7 @@ const Experiences = () => {
           <h1 className="text-5xl font-bold mb-4">Unique Experiences</h1>
           <p className="text-xl opacity-90 max-w-3xl mx-auto">
             Immerse yourself in extraordinary activities and create unforgettable memories 
-            in the heart of Uttar Pradesh
+            in the heart of Sikkim
           </p>
         </div>
       </div>

@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const PlanJourney = () => {
   const [selectedTab, setSelectedTab] = useState('itineraries');
 
-  // 10 Famous Trip Itineraries in Uttar Pradesh
+  // 10 Famous Trip Itineraries in Sikkim
   const tripItineraries = [
     {
       id: 1,
@@ -29,7 +29,7 @@ const PlanJourney = () => {
     },
     {
       id: 2,
-      name: "Spiritual Uttar Pradesh",
+      name: "Spiritual Sikkim",
       duration: "8 Days",
       places: [
         "Varanasi", "Sarnath", "Ayodhya", "Chitrakoot", 
@@ -350,7 +350,7 @@ const PlanJourney = () => {
                 <Compass className="w-6 h-6 text-white" />
               </div>
               <div>
-                <h1 className="text-xl font-bold text-gray-900">UP Explorer</h1>
+                <h1 className="text-xl font-bold text-gray-900">SIKKIM Explorer</h1>
                 <p className="text-xs text-gray-500">Premium Travel Experience</p>
               </div>
             </Link>
@@ -372,7 +372,7 @@ const PlanJourney = () => {
           <h1 className="text-5xl font-bold mb-4">Plan Your Journey</h1>
           <p className="text-xl opacity-90 max-w-3xl mx-auto">
             Complete travel planning with curated itineraries, accommodations, dining, 
-            and cost breakdowns for the perfect Uttar Pradesh experience
+            and cost breakdowns for the perfect Sikkim experience
           </p>
         </div>
       </div>
@@ -411,7 +411,7 @@ const PlanJourney = () => {
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">10 Famous Trip Itineraries</h2>
               <p className="text-gray-600 text-lg">
-                Carefully crafted journeys covering the best of Uttar Pradesh
+                Carefully crafted journeys covering the best of Sikkim
               </p>
             </div>
 
@@ -526,7 +526,7 @@ const PlanJourney = () => {
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Famous Restaurants</h2>
               <p className="text-gray-600 text-lg">
-                Discover the best culinary experiences across Uttar Pradesh
+                Discover the best culinary experiences across Sikkim
               </p>
             </div>
 

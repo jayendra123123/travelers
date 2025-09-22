@@ -192,7 +192,7 @@ const Culture = () => {
                 <Compass className="w-6 h-6 text-white" />
               </div>
               <div>
-                <h1 className="text-xl font-bold text-gray-900">UP Explorer</h1>
+                <h1 className="text-xl font-bold text-gray-900">SIKKIM Explorer</h1>
                 <p className="text-xs text-gray-500">Premium Travel Experience</p>
               </div>
             </Link>
@@ -213,7 +213,7 @@ const Culture = () => {
         <div className="max-w-7xl mx-auto px-6 text-center">
           <h1 className="text-5xl font-bold mb-4">Cultural Heritage</h1>
           <p className="text-xl opacity-90 max-w-3xl mx-auto">
-            Explore the rich tapestry of diverse cultures that make Uttar Pradesh 
+            Explore the rich tapestry of diverse cultures that make Sikkim 
             a vibrant mosaic of traditions, arts, and customs
           </p>
         </div>
@@ -248,7 +248,7 @@ const Culture = () => {
             {cultureCategories.find(c => c.id === selectedCulture)?.name || 'All Cultures'}
           </h2>
           <p className="text-gray-600 text-lg">
-            Discover {filteredCultures.length} unique cultural traditions of Uttar Pradesh
+            Discover {filteredCultures.length} unique cultural traditions of Sikkim
           </p>
         </div>
 
