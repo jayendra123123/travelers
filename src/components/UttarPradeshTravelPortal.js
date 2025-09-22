@@ -4,15 +4,10 @@ import { Link } from 'react-router-dom';
 import LocationCard from './LocationCard';
 import SearchSuggestions from './SearchSuggestions';
 
-const UttarPradeshTravelPortal = () => {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [showSuggestions, setShowSuggestions] = useState(false);
-  const [selectedCategory, setSelectedCategory] = useState('all');
-
-  // 100+ Famous locations in Uttar Pradesh
-  const locations = [
-    // Historical & Heritage
-    { name: 'Taj Mahal, Agra', category: 'historical', description: 'UNESCO World Heritage Site, Symbol of Love', rating: 4.9, visitors: '6M+' },
+// 100+ Famous locations in Uttar Pradesh - moved outside component to prevent recreating on every render
+const locations = [
+  // Historical & Heritage
+  { name: 'Taj Mahal, Agra', category: 'historical', description: 'UNESCO World Heritage Site, Symbol of Love', rating: 4.9, visitors: '6M+' },
     { name: 'Agra Fort', category: 'historical', description: 'Mughal Architecture Masterpiece', rating: 4.7, visitors: '2M+' },
     { name: 'Fatehpur Sikri', category: 'historical', description: 'Ghost City of Akbar', rating: 4.6, visitors: '1M+' },
     { name: 'Red Fort, Delhi Border', category: 'historical', description: 'Mughal Dynasty Fortress', rating: 4.5, visitors: '800K+' },
@@ -144,8 +139,8 @@ const UttarPradeshTravelPortal = () => {
     { name: 'Pushkar Fair Ground', category: 'cultural', description: 'Camel Fair Venue', rating: 4.3, visitors: '500K+' }
   ];
 
-  // Nearby locations mapping - when user searches for a location, show nearby attractions
-  const nearbyLocationsMap = {
+// Nearby locations mapping - when user searches for a location, show nearby attractions
+const nearbyLocationsMap = {
     'agra': [
       { name: 'Taj Mahal, Agra', category: 'historical', description: 'UNESCO World Heritage Site, Symbol of Love', rating: 4.9, visitors: '6M+', distance: '0 km' },
       { name: 'Agra Fort', category: 'historical', description: 'Mughal Architecture Masterpiece', rating: 4.7, visitors: '2M+', distance: '2.5 km' },
@@ -234,7 +229,12 @@ const UttarPradeshTravelPortal = () => {
       { name: 'Veer Bahadur Singh Planetarium', category: 'modern', description: 'Science & Astronomy Center', rating: 4.2, visitors: '120K+', distance: '6 km' },
       { name: 'Chauri Chaura', category: 'historical', description: 'Freedom Struggle Site', rating: 4.0, visitors: '75K+', distance: '25 km' }
     ]
-  };
+};
+
+const UttarPradeshTravelPortal = () => {
+  const [searchQuery, setSearchQuery] = useState('');
+  const [showSuggestions, setShowSuggestions] = useState(false);
+  const [selectedCategory, setSelectedCategory] = useState('all');
 
   // Filter suggestions based on search query - now includes nearby locations
   const filteredSuggestions = useMemo(() => {
