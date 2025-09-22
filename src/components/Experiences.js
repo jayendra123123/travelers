@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Star, Clock, Users, Camera, Heart, Zap, Mountain, Waves, Compass } from 'lucide-react';
+import { Star, Clock, Users, Compass } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Experiences = () => {

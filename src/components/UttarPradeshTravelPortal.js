@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react';
-import { Search, MapPin, Star, Award, Globe, Calendar, Compass } from 'lucide-react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Search, Award, Globe, Calendar, Compass } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import LocationCard from './LocationCard';
 import SearchSuggestions from './SearchSuggestions';
 
@@ -8,7 +8,6 @@ const UttarPradeshTravelPortal = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [showSuggestions, setShowSuggestions] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState('all');
-  const navigate = useNavigate();
 
   // 100+ Famous locations in Uttar Pradesh
   const locations = [

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { MapPin, Star, Clock, Users, DollarSign, Utensils, Bed, Car, Calendar, CheckCircle, Compass } from 'lucide-react';
+import { MapPin, Star, Clock, DollarSign, Utensils, Bed, Car, Calendar, CheckCircle, Compass } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const PlanJourney = () => {

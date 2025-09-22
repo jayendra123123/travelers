@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Users, MapPin, Calendar, Music, Utensils, Palette, Heart, Compass } from 'lucide-react';
+import { Users, MapPin, Calendar, Utensils, Palette, Heart, Compass } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Culture = () => {

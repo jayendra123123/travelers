@@ -1,5 +1,5 @@
 import React from 'react';
-import { MapPin, Star, ArrowUpRight, Navigation } from 'lucide-react';
+import { Star, ArrowUpRight, Navigation } from 'lucide-react';
 
 const SearchSuggestions = ({ showSuggestions, filteredSuggestions, onSuggestionClick, searchQuery }) => {
   if (!showSuggestions || filteredSuggestions.length === 0) {
