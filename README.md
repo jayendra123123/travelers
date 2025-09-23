@@ -1,41 +1,43 @@
-# Sikkim Explorer - Premium Travel Portal
+# India Explorer - Premium Travel Portal
 
-![Sikkim Explorer](https://via.placeholder.com/800x400?text=Sikkim+Explorer)
+![India Explorer](https://via.placeholder.com/800x400?text=India+Explorer)
 
-A modern, responsive travel web application showcasing Sikkim's breathtaking destinations, cultural experiences, and travel planning resources built with React and Tailwind CSS.
+A modern, responsive travel web application showcasing India's breathtaking destinations, cultural experiences, and travel planning resources built with React and Tailwind CSS.
 
 ## Project Overview
 
-Sikkim Explorer is a premium travel portal designed to promote tourism in Sikkim, India. The application features an extensive database of destinations, experiences, and cultural insights, making it the perfect companion for travelers planning to explore this beautiful Himalayan state.
+India Explorer is a premium travel portal designed to promote tourism across all of India. The application features an extensive database of destinations, experiences, and cultural insights from every state and region, making it the perfect companion for travelers planning to explore this diverse and culturally rich country.
 
 ## Key Features
 
 ### 🌄 Destination Discovery
 
-- **100+ Curated Destinations**: Explore monasteries, lakes, mountains, and cultural sites
-- **Category Filtering**: Filter destinations by type (heritage, spiritual, nature, etc.)
+- **500+ Curated Destinations**: Explore temples, monuments, beaches, mountains, wildlife sanctuaries, and cultural sites across all Indian states
+- **Multi-level Filtering**: Filter destinations by state, region, and type (heritage, spiritual, nature, etc.)
 - **Interactive Cards**: Visually appealing destination cards with ratings, visitor counts, and highlights
 - **Map Integration**: One-click Google Maps integration for any destination
 
 ### 🔍 Smart Search Functionality
 
-- **Intelligent Search**: Find destinations based on keywords, categories, or descriptions
+- **Intelligent Search**: Find destinations based on keywords, categories, states, or descriptions
+- **Regional Exploration**: Discover attractions by state, city, or geographical region
 - **Nearby Attractions**: Discover related destinations based on proximity
 - **Search Suggestions**: Dynamically populated suggestions with rich visual preview cards
 
 ### 🗺️ Travel Planning Tools
 
-- **Trip Itineraries**: Curated multi-day trip plans with detailed breakdowns
+- **Cross-country Itineraries**: Curated multi-day trip plans covering multiple states with detailed breakdowns
+- **Regional Circuit Recommendations**: Suggested travel circuits within specific regions of India
 - **Budget Calculators**: Estimated costs for accommodation, food, transport, and activities
-- **Seasonal Guides**: Best times to visit different destinations
+- **Seasonal Guides**: Best times to visit different regions and states
 - **Duration Estimates**: Recommended visit durations for better trip planning
 
 ### 🏔️ Rich Cultural Insights
 
-- **Cultural Traditions**: Learn about Sikkim's diverse cultural heritage
-- **Festival Information**: Details on local celebrations and festivals
-- **Culinary Experiences**: Regional cuisine and food recommendations
-- **Authentic Experiences**: Handpicked authentic cultural experiences
+- **Cultural Traditions**: Learn about India's diverse cultural heritage across all states and regions
+- **Festival Information**: Details on local celebrations and festivals throughout the country
+- **Culinary Experiences**: Regional cuisine and food recommendations from every corner of India
+- **Authentic Experiences**: Handpicked authentic cultural experiences representing India's diversity
 
 ### 💼 Technical Features
 

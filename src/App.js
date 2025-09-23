@@ -1,7 +1,7 @@
 import './App.css';
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import UttarPradeshTravelPortal from './components/UttarPradeshTravelPortal';
+import IndiaExplorerPortal from './components/IndiaExplorerPortal';
 import Destinations from './components/Destinations';
 import Experiences from './components/Experiences';
 import Culture from './components/Culture';
@@ -12,7 +12,7 @@ function App() {
     <div className="App">
       <Router>
         <Routes>
-          <Route path="/" element={<UttarPradeshTravelPortal />} />
+          <Route path="/" element={<IndiaExplorerPortal />} />
           <Route path="/destinations" element={<Destinations />} />
           <Route path="/experiences" element={<Experiences />} />
           <Route path="/culture" element={<Culture />} />

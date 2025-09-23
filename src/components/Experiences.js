@@ -280,7 +280,7 @@ const Experiences = () => {
                 <Compass className="w-6 h-6 text-white" />
               </div>
               <div>
-                <h1 className="text-xl font-bold text-gray-900">SIKKIM Explorer</h1>
+                <h1 className="text-xl font-bold text-gray-900">INDIA Explorer</h1>
                 <p className="text-xs text-gray-500">Premium Travel Experience</p>
               </div>
             </Link>
@@ -299,10 +299,10 @@ const Experiences = () => {
       {/* Header */}
       <div className="bg-gradient-to-r from-purple-600 to-pink-600 text-white py-16">
         <div className="max-w-7xl mx-auto px-6 text-center">
-          <h1 className="text-5xl font-bold mb-4">Unique Experiences</h1>
+          <h1 className="text-5xl font-bold mb-4">India Experiences</h1>
           <p className="text-xl opacity-90 max-w-3xl mx-auto">
             Immerse yourself in extraordinary activities and create unforgettable memories 
-            in the heart of Sikkim
+            across the diverse regions of India
           </p>
         </div>
       </div>
@@ -336,7 +336,7 @@ const Experiences = () => {
             {experienceTypes.find(t => t.id === selectedType)?.name || 'All Experiences'}
           </h2>
           <p className="text-gray-600 text-lg">
-            {filteredExperiences.length} incredible experiences to choose from
+            {filteredExperiences.length} incredible experiences to discover across India
           </p>
         </div>
 

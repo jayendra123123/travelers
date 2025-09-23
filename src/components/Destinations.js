@@ -213,7 +213,7 @@ const Destinations = () => {
     : famousDestinations.filter(dest => dest.category === selectedCategory);
 
   const handleLocationClick = (locationName) => {
-    const query = encodeURIComponent(locationName + ', Sikkim, India');
+    const query = encodeURIComponent(locationName + ', India');
     window.open(`https://www.google.com/maps/search/${query}`, '_blank');
   };
 
@@ -228,7 +228,7 @@ const Destinations = () => {
                 <Compass className="w-6 h-6 text-white" />
               </div>
               <div>
-                <h1 className="text-xl font-bold text-gray-900">SIKKIM Explorer</h1>
+                <h1 className="text-xl font-bold text-gray-900">INDIA Explorer</h1>
                 <p className="text-xs text-gray-500">Premium Travel Experience</p>
               </div>
             </Link>
@@ -247,10 +247,10 @@ const Destinations = () => {
       {/* Header */}
       <div className="bg-gradient-to-r from-amber-500 to-orange-600 text-white py-16">
         <div className="max-w-7xl mx-auto px-6 text-center">
-          <h1 className="text-5xl font-bold mb-4">Famous Destinations</h1>
+          <h1 className="text-5xl font-bold mb-4">India Destinations</h1>
           <p className="text-xl opacity-90 max-w-3xl mx-auto">
-            Discover the most iconic and breathtaking destinations in Sikkim, 
-            from ancient heritage sites to spiritual centers and natural wonders
+            Discover the most iconic and breathtaking destinations across India, 
+            from ancient heritage sites to spiritual centers and natural wonders from every region
           </p>
         </div>
       </div>

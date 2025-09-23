@@ -334,7 +334,7 @@ const UttarPradeshTravelPortal = () => {
 
         {/* Hero Content */}
         <div className="relative z-10 text-center text-white px-6 max-w-5xl">
-          <div className="mb-6 flex justify-center">
+              <div className="mb-6 flex justify-center">
             <div className="bg-white/10 backdrop-blur-md rounded-full px-6 py-3 border border-white/20">
               <span className="text-amber-300 font-medium flex items-center">
                 <Award className="w-5 h-5 mr-2" />
@@ -349,9 +349,7 @@ const UttarPradeshTravelPortal = () => {
             </span>
             <br />
             <span className="text-white/90">Unveiled</span>
-          </h1>
-          
-          <p className="text-xl md:text-2xl mb-12 text-gray-300 leading-relaxed max-w-3xl mx-auto">
+          </h1>          <p className="text-xl md:text-2xl mb-12 text-gray-300 leading-relaxed max-w-3xl mx-auto">
             Embark on an extraordinary journey through India's most breathtaking Himalayan state, where natural beauty meets vibrant culture
           </p>
 
